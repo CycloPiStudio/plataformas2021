@@ -14,7 +14,10 @@ Sin vidas, solo una oportunidad
 
 https://es.wikipedia.org/wiki/Vlad_el_Empalador 
 
-D
+Referencia de imágenes:
+
+https://upload.wikimedia.org/wikipedia/commons/5/58/Vlad_tepes_painting.jpg
+
 
 Dimensiones 1.280 x 720
 
