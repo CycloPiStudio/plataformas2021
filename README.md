@@ -14,4 +14,5 @@ Sin vidas, solo una oportunidad
 
 D
 
-Dimensiones 1.280 x 720
+Dimensiones 1920 x 1080
+
