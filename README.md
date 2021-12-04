@@ -12,6 +12,8 @@ Para varias pantallas
 
 Sin vidas, solo una oportunidad
 
+https://es.wikipedia.org/wiki/Vlad_el_Empalador 
+
 D
 
 Dimensiones 1.280 x 720
