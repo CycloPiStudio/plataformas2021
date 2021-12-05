@@ -8,8 +8,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 45, 120 )
 
-[sub_resource type="Animation" id=2]
-length = 0.001
+[sub_resource type="Animation" id=4]
+resource_name = "caminar_derecha"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:position")
 tracks/0/interp = 1
@@ -17,10 +17,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -38, 92 ) ]
+"values": [ Vector2( -38, 92 ), Vector2( 38, 94 ), Vector2( -38, 92 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite2:rotation_degrees")
@@ -29,73 +29,73 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 25.185, -16.4919, 25.185 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite4:position")
+tracks/2/path = NodePath("Sprite2:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 22, 95 ) ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite4:rotation_degrees")
+tracks/3/path = NodePath("Sprite:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -15.501 ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Sprite2:flip_h")
+tracks/4/path = NodePath("Sprite4:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Sprite:flip_h")
+tracks/5/path = NodePath("Sprite4:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ Vector2( 36, 93 ), Vector2( -26, 98 ), Vector2( 36, 93 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Sprite4:flip_h")
+tracks/6/path = NodePath("Sprite4:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ -2.59941, 39.897, -2.59941 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Sprite3:rotation_degrees")
+tracks/7/path = NodePath("Sprite3:flip_h")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -103,24 +103,12 @@ tracks/7/enabled = true
 tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Sprite3:flip_h")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "caminar"
+resource_name = "caminar_izquierda"
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:position")
@@ -231,104 +219,8 @@ tracks/8/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "caminar2"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -38, 92 ), Vector2( 38, 94 ), Vector2( -38, 92 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 25.185, -16.4919, 25.185 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite2:flip_h")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Sprite4:flip_h")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Sprite4:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 36, 93 ), Vector2( -26, 98 ), Vector2( 36, 93 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Sprite4:rotation_degrees")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -2.59941, 39.897, -2.59941 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Sprite3:flip_h")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 55, 124.5 )
 
 [node name="Jugador" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -338,12 +230,13 @@ shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( -38, 92 )
+rotation = 0.439561
 texture = ExtResource( 3 )
 flip_h = true
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 22, 95 )
-rotation = -0.270543
+position = Vector2( 36, 93 )
+rotation = -0.0453683
 texture = ExtResource( 3 )
 flip_h = true
 
@@ -353,10 +246,19 @@ flip_h = true
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 6, -85 )
+rotation = 0.130935
 texture = ExtResource( 4 )
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "caminar"
-anims/RESET = SubResource( 2 )
-anims/caminar = SubResource( 3 )
-anims/caminar2 = SubResource( 4 )
+autoplay = "caminar_izquierda"
+anims/caminar_derecha = SubResource( 4 )
+anims/caminar_izquierda = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 3, -7.5 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
