@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/synthesize6mo.mp3-1a7b7bb11f7272be2e13fb663b599cfa.mp3str"
+
+[deps]
+
+source_file="res://Pantallas/synthesize6mo.mp3"
+dest_files=[ "res://.import/synthesize6mo.mp3-1a7b7bb11f7272be2e13fb663b599cfa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/synthesize3-impero.mp3-6de74c5c02d1711ca3b860a45f9e37cc.mp3str"
+
+[deps]
+
+source_file="res://Pantallas/synthesize3-impero.mp3"
+dest_files=[ "res://.import/synthesize3-impero.mp3-6de74c5c02d1711ca3b860a45f9e37cc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/synthesize2-lugar.mp3-e54302e2293b21e7bdebf13704f94c99.mp3str"
+
+[deps]
+
+source_file="res://Pantallas/synthesize2-lugar.mp3"
+dest_files=[ "res://.import/synthesize2-lugar.mp3-e54302e2293b21e7bdebf13704f94c99.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/synthesize1-fecha1.mp3-9e5b1515a7d5bda9de997ad0090bd363.mp3str"
+
+[deps]
+
+source_file="res://Pantallas/synthesize1-fecha1.mp3"
+dest_files=[ "res://.import/synthesize1-fecha1.mp3-9e5b1515a7d5bda9de997ad0090bd363.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
