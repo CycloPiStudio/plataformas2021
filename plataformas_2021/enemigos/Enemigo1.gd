@@ -15,14 +15,9 @@ func _physics_process(delta):
 		velocity.x =  WALK_SPEED
 	else:
 		velocity.x = 0
-	if $RayIzquierda.is_colliding() == false :
-		direccion = "right"
-	elif $RayDerecha.is_colliding() == false :
-		direccion = "left"
-	else:
-		pass
+	
 	animacion(direccion)
-
+	movimiento()
 func animacion(di):
 	if  di == "left":
 		$AnimationPlayer.play("andar_izquierda")
@@ -36,4 +31,14 @@ func animacion(di):
 
 	# The second parameter of "move_and_slide" is the normal pointing up.
 	# In the case of a 2D platformer, in Godot, upward is negative y, which translates to -1 as a normal.
-	move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1))
+
+func movimiento():
+	if $RayDer.is_colliding() or not $RayDerecha.is_colliding():
+#		print("ver collider der", $RayDer.is_colliding())
+		direccion = "left"
+	elif $RayIzq.is_colliding() or not $RayIzquierda.is_colliding():
+#		print("v er collider izq", $RayIzq.is_colliding() )
+		direccion = "right"
+	
+		
