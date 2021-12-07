@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://jugador/jugador.gd" type="Script" id=1]
 [ext_resource path="res://jugador/imagenes/jugador_cuerpo.png" type="Texture" id=2]
@@ -7,6 +7,57 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 45, 120 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite3:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite4:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite2:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "caminar_derecha"
@@ -165,10 +216,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ false, false, false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Sprite4:flip_h")
@@ -177,10 +228,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ false, false, false ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Sprite2:flip_h")
@@ -189,10 +240,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ false, false, false ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Sprite3:rotation_degrees")
@@ -213,10 +264,10 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ false, false, false ]
 }
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -230,28 +281,23 @@ shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( -38, 92 )
-rotation = 0.439561
 texture = ExtResource( 3 )
-flip_h = true
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 36, 93 )
-rotation = -0.0453683
+position = Vector2( 22, 95 )
+rotation = -0.270543
 texture = ExtResource( 3 )
-flip_h = true
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-flip_h = true
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 6, -85 )
-rotation = 0.130935
 texture = ExtResource( 4 )
-flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "caminar_izquierda"
+anims/RESET = SubResource( 6 )
 anims/caminar_derecha = SubResource( 4 )
 anims/caminar_izquierda = SubResource( 3 )
 
@@ -262,5 +308,6 @@ position = Vector2( 3, -7.5 )
 shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
