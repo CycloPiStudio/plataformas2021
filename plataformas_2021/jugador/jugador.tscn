@@ -261,4 +261,6 @@ anims/caminar_izquierda = SubResource( 3 )
 position = Vector2( 3, -7.5 )
 shape = SubResource( 5 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
