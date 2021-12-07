@@ -48,4 +48,8 @@ Imágenes:
 
 https://es.wikipedia.org/wiki/Batalla_de_Cr%C3%A9cy#/media/Archivo:Battle_of_crecy_froissart.jpg
 
+https://en.wikipedia.org/wiki/Vlad_the_Impaler#/media/File:Vlad_Tepes_002.jpg
+
+
+
 
