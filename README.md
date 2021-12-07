@@ -52,7 +52,5 @@ https://en.wikipedia.org/wiki/Vlad_the_Impaler#/media/File:Vlad_Tepes_002.jpg
 
 https://en.wikipedia.org/wiki/Mehmed_the_Conqueror#/media/File:Gentile_Bellini_003.jpg
 
-
-
-
+https://commons.wikimedia.org/wiki/File:Nuremberg_chronicles_-_Augusta_vendilicorum.png
 
