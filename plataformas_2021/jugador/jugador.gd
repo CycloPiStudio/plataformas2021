@@ -74,11 +74,12 @@ func _physics_process(delta):
 #
 func _on_Area2D_body_entered(body):
 #	print("mira que bbody entrabody", body.name)
-	if body.name == "Enemigo":
-		print("daño")
-		print("posicion del malo: ",body.get_position())
-		print("posicion del bueno: ", get_position())
-		if get_position().y < body.get_position().y:
-			print("player mas arriba")
-		else:
-			print("player mas abajo")
+#	if body.name == "Enemigo":
+#		print("daño")
+#		print("posicion del malo: ",body.get_position())
+#		print("posicion del bueno: ", get_position())
+#		if get_position().y < body.get_position().y:
+#			print("player mas arriba")
+#		else:
+#			print("player mas abajo")
+	pass
