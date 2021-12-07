@@ -6,6 +6,8 @@ var direccion
 var velocity = Vector2()
 func _ready():
 	direccion = "left"
+	print("posicion jugador ",get_parent().get_node("Jugador").get_position().y)
+	print("posicion enemigo  ",get_position().y)
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 
@@ -15,7 +17,8 @@ func _physics_process(delta):
 		velocity.x =  WALK_SPEED
 	else:
 		velocity.x = 0
-	
+#	if is_on_wall() :
+#		print("me pasan por encima")
 	animacion(direccion)
 	movimiento()
 func animacion(di):
@@ -42,3 +45,15 @@ func movimiento():
 		direccion = "right"
 	
 		
+
+
+func _on_AreaEnemigo_body_entered(body):
+	if body.name == "Jugador":
+#		print("daño")
+#		print("posicion del malo: ",body.get_position())
+#		print("posicion del bueno: ", get_position())
+		if get_position().y > body.get_position().y +80:
+			print("player mas arriba")
+			queue_free()
+		else:
+			print("player mas abajo")
