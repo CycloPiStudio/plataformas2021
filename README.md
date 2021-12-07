@@ -43,3 +43,9 @@ The Principality of Wallachia is in conflict with the Ottoman Empire.
 Vlad the third prince of Wallachia prepares to attack the Turkish camp.
 
 Vlad aims to capture the second Sultan Mehmed.
+
+Imágenes:
+
+https://es.wikipedia.org/wiki/Batalla_de_Cr%C3%A9cy#/media/Archivo:Battle_of_crecy_froissart.jpg
+
+
